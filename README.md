@@ -66,18 +66,39 @@ O sistema permite que o usuário:
 
 Antes de iniciar, é necessário ter instalado:
 
-- Java 26
+- Java 21 ou superior
 - Maven
 - Node.js
 - NPM
+- Git
+
+---
+
+### Clonando o Repositório
+
+Clone o projeto para sua máquina:
+
+```bash
+git clone https://github.com/joaopasj/SGC-API.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd SGC-API
+```
 
 ---
 
 ### Executando o Backend
 
-1. Abra o projeto backend.
+Acesse a pasta do backend:
 
-2. Execute a aplicação utilizando o Maven:
+```bash
+cd backend
+```
+
+Execute a aplicação:
 
 ```bash
 mvn spring-boot:run
@@ -89,29 +110,35 @@ Ou execute diretamente a classe principal:
 SgcApiApplication
 ```
 
-3. A documentação Swagger poderá ser acessada em:
+Após iniciar, a documentação Swagger poderá ser acessada em:
 
 ```text
 http://localhost:8080/swagger-ui.html
 ```
 
+---
+
 ### Executando o Frontend
 
-1. Abra o terminal na pasta do frontend.
+Abra outro terminal e acesse a pasta do frontend:
 
-2. Instale as dependências:
+```bash
+cd frontend
+```
+
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-3. Execute a aplicação:
+Execute a aplicação:
 
 ```bash
 npm run dev
 ```
 
-4. Acesse a aplicação pelo navegador:
+A aplicação estará disponível em:
 
 ```text
 http://localhost:5173
@@ -121,12 +148,21 @@ http://localhost:5173
 
 ### Utilização
 
-Após iniciar o backend e o frontend:
+Com o backend e frontend em execução, o sistema permitirá:
 
-- Cadastre usuários;
-- Crie chamados vinculados aos usuários cadastrados;
-- Edite ou remova usuários e chamados;
-- Utilize os filtros de busca por título, status e prioridade;
-- Visualize as estatísticas na página Dashboard.
+- Cadastrar usuários;
+- Editar usuários;
+- Excluir usuários;
+- Cadastrar chamados;
+- Editar chamados;
+- Excluir chamados;
+- Filtrar chamados por título;
+- Filtrar chamados por status;
+- Filtrar chamados por prioridade;
+- Visualizar estatísticas no Dashboard.
 
-> O banco de dados H2 é executado em memória, portanto os dados serão reiniciados sempre que a aplicação backend for encerrada.
+---
+
+### Observação
+
+O projeto utiliza o banco de dados H2 em memória. Dessa forma, os dados cadastrados serão perdidos sempre que a aplicação backend for encerrada.
