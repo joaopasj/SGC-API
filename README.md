@@ -66,7 +66,7 @@ O sistema permite que o usuário:
 
 Antes de iniciar, é necessário ter instalado:
 
-- Java 21 ou superior
+- Java 26
 - Maven
 - Node.js
 - NPM
